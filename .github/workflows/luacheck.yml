@@ -1,13 +1,13 @@
-name: build
+name: Luacheck
 on: [push, pull_request]
 
 jobs:
-  luacheck:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
-    - uses: actions/checkout@main
+      uses: actions/checkout@main
 
     - name: Luacheck
       uses: lunarmodules/luacheck@master
