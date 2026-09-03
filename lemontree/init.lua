@@ -35,7 +35,7 @@ minetest.register_node("lemontree:lemon", {
 	end,
 
 	on_dig = function(pos, node, digger)
-		if digger:is_player() then
+		if digger and digger:is_player() then
 			local inv = digger:get_inventory()
 			if inv:room_for_item("main", "lemontree:lemon") then
 				inv:add_item("main", "lemontree:lemon")
